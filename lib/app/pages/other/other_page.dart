@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class OtherPage extends StatefulWidget {
+  final String text;
+
+  const OtherPage({Key key, this.text}) : super(key: key);
+
   @override
   _OtherPageState createState() => _OtherPageState();
 }
@@ -15,7 +19,7 @@ class _OtherPageState extends State<OtherPage> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(40.0),
-          child: Text('Texto digitado: ${'a'}'),
+          child: Text('Texto digitado: ${widget.text}'),
         ),
       ),
     );
