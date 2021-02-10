@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _homeController = HomeController();
+  final homeController = Modular.get<HomeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +20,16 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: const EdgeInsets.all(40.0),
           child: TextField(
-            onChanged: (String value) => _homeController.text = value,
+            onChanged: (String value) => homeController.text = value,
             decoration: InputDecoration(labelText: 'Um texto qualquer'),
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if (_homeController.text.isEmpty) _homeController.text = 'nada foi digitado';
-          // Navigator.of(context).pushNamed('/other/${_homeController.text}');
-          Modular.to.pushNamed('/other/${_homeController.text}');
+          // if (homeController.text.isEmpty) homeController.text = 'nada foi digitado';
+          // Navigator.of(context).pushNamed('/other/${homeController.text}');
+          Modular.to.pushNamed('/other');
         },
         child: Icon(Icons.add),
       ),
