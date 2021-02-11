@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_modular_sample/app/shared/models/pokemon_model.dart';
+import 'package:flutter_modular_sample/app/models/pokemon_model.dart';
 
 class PokemonRepository {
   final Dio dio;

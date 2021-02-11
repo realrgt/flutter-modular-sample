@@ -1,6 +1,7 @@
-import 'package:flutter_modular_sample/app/shared/models/pokemon_model.dart';
-import 'package:flutter_modular_sample/app/shared/repositories/poke_repository.dart';
+import 'package:flutter_modular_sample/app/models/pokemon_model.dart';
 import 'package:mobx/mobx.dart';
+
+import 'repositories/poke_repository.dart';
 part 'home_controller.g.dart';
 
 class HomeController = _HomeControllerBase with _$HomeController;
